@@ -1,0 +1,90 @@
+<!-- (c) Copyright Learning by Wrote 2015 -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA Web Platform API Specialization DTD                                    -->
+<!--  VERSION:   1.O                                               -->
+<!--  DATE:      February 2006                                      -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identfier or an 
+      appropriate system identifier 
+PUBLIC "-//LbyW//DTD DITA WPAPI Topic//EN"
+      Delivered as file "wpapitopic_shell.dtd"                            -->
+
+<!-- doctype:
+<!DOCTYPE wpapitopic PUBLIC "-//LbyW//DTD DITA WPAPI Topic//EN" "wpapitopic_shell.dtd">
+-->
+<!-- catalog:
+<!ENTITY % wpapi-dtd 		PUBLIC "-//LbyW//DTD 		DITA TLO Term Topic//EN" "wpapitopic_shell.dtd">
+<!ENTITY % wpapi-typemod 	PUBLIC "-//LbyW//ELEMENTS 	DITA TLO Term Topic//EN" "wpapitopic.mod">
+-->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--                                                               -->
+<!-- PURPOSE:    DTD to describe api topics for  Web Platform demos     -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             July 2015                                         -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-dec     PUBLIC
+"-//OASIS//ENTITIES DITA Highlight Domain//EN"
+"../../dtd/highlightDomain.ent"                                                >
+%hi-d-dec;
+
+<!ENTITY % pr-d-dec     PUBLIC 
+"-//OASIS//ENTITIES DITA Programming Domain//EN" 
+"../../dtd/programmingDomain.ent"                                              >
+%pr-d-dec;
+
+<!--vocabulary substitution (domain extensions) -->
+<!ENTITY % pre          "pre     | %pr-d-pre; "                       >
+<!ENTITY % keyword      "keyword | %pr-d-keyword;"                   >
+<!ENTITY % ph           "ph      | %pr-d-ph;   | 
+                                    %hi-d-ph; "       >
+<!ENTITY % fig          "fig     | %pr-d-fig; "      >
+<!ENTITY % dl           "dl      | %pr-d-dl;"                        >
+
+<!--vocabulary declarations-->
+<!ENTITY pr-d-att "(topic pr-d)">
+<!ENTITY hi-d-att "(topic hi-d)">
+<!ENTITY xpd-d-att "(topic xpd-d)"><!-- unique for expeDITA processing -->
+
+<!--Specify the topics that can be included within a wpapi topic-->
+<!ENTITY % wpapi-info-types "wpapitopic">
+
+<!--     DOMAIN ATTRIBUTE DECLARATIONS       -->
+<!--ENTITY xpd-props-d-att "a(props  formtype)"-->
+<!--     DOMAIN EXTENSIONS       -->
+<!--     DOMAIN ATTRIBUTE EXTENSIONS     -->
+<!--     TOPIC NESTING OVERRIDE      -->
+<!--     DOMAINS ATTRIBUTE OVERRIDE      -->
+
+<!--Specify the domain-specific vocabulary modules (limited for forms)-->
+<!ENTITY included-domains "&pr-d-att; &hi-d-att; &xpd-d-att;">
+
+<!--Embed the base topic module to define the base elements-->
+<!ENTITY % topic-type PUBLIC "-//OASIS//ELEMENTS DITA Topic//EN" "../../dtd/topic.mod">
+  %topic-type;
+
+<!--Embed the wpapi module to get the wpapi elements-->
+<!ENTITY % wpapi-typemod PUBLIC "-//LbyW//ELEMENTS DITA WPAPI Topic//EN" "wpapitopic.mod">
+  %wpapi-typemod;
+
+<!ENTITY % hi-d-def PUBLIC "-//OASIS//ELEMENTS DITA Highlight Domain//EN" "../../dtd/highlightDomain.mod">
+  %hi-d-def;
+
+<!ENTITY % pr-d-def PUBLIC "-//OASIS//ENTITIES DITA Programming Domain//EN" "../../dtd/programmingDomain.mod">
+  %pr-d-def;

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE wpapitopic PUBLIC "-//LbyW//DTD DITA WPAPI Topic//EN" "wpapitopic_shell.dtd">
+<wpapitopic id="Blob">
+<wpapiname>Blob</wpapiname>
+<wpapibody>
+<p outputclass="standardization_status">W3C Working Draft</p>
+<section id="Summary">
+<title>Summary</title>
+<p>
+The
+<b>Blob</b>
+object represents immutable raw data. It provides a method to slice data objects between ranges of bytes into further chunks of raw data.
+</p>
+</section>
+<section id="Overview">
+<title>Overview</title>
+<p>
+<b>Blob</b>
+provides an attribute representing the size of the chunk of data. The
+<xref format="html" href="https://docs.webplatform.org/wiki/apis/file/File" outputclass="apis/file/File">
+<b>File</b>
+</xref>
+object inherits from the
+<b>Blob</b>
+object.
+<b>Blob</b>
+objects can be read asynchronously only on the main thread via
+<xref format="html" href="https://docs.webplatform.org/wiki/apis/file/FileReader" outputclass="apis/file/FileReader">
+<b>FileReader</b>
+</xref>
+objects, but metadata access via attributes such as
+<b>size</b>
+and
+<b>type</b>
+return synchronously (this trade-off is based on the underlying assumption that metadata access will not significantly block or disrupt the browser's main thread, whereas reading
+<b>Blob</b>
+data will).
+</p>
+</section>
+<section id="Properties">
+<title>Properties</title>
+<p>
+<i>No properties.</i>
+</p>
+</section>
+<section id="Methods">
+<title>Methods</title>
+<p>
+<i>No methods.</i>
+</p>
+</section>
+<section id="Events">
+<title>Events</title>
+<p>
+<i>No events.</i>
+</p>
+</section>
+<section id="Examples">
+<title>Examples</title>
+<p>
+// Example for creating a URL to a typed array using a blob
+</p>
+<fig outputclass="example">
+<p>
+<ph outputclass="language">JavaScript</ph>
+</p>
+<pre outputclass=" language-javascript">
+<codeph outputclass=" language-javascript">
+<ph outputclass="token keyword">var</ph>
+typedArray
+<ph outputclass="token operator">=</ph>
+GetTheTypedArraySomehow
+<ph outputclass="token punctuation">(</ph>
+<ph outputclass="token punctuation">)</ph>
+<ph outputclass="token punctuation">;</ph>
+<ph outputclass="token keyword">var</ph>
+blob
+<ph outputclass="token operator">=</ph>
+<ph outputclass="token keyword">new</ph>
+Blob
+<ph outputclass="token punctuation">(</ph>
+<ph outputclass="token punctuation">[</ph>
+typedArray
+<ph outputclass="token punctuation">]</ph>
+<ph outputclass="token punctuation">,</ph>
+<ph outputclass="token punctuation">
+<!--shortcode/-->
+</ph>
+type
+<ph outputclass="token punctuation">:</ph>
+<ph outputclass="token string">"application/octet-binary"</ph>
+<ph outputclass="token punctuation"/>
+<ph outputclass="token punctuation">)</ph>
+<ph outputclass="token punctuation">;</ph>
+<ph outputclass="token comment">// pass a useful mime type here</ph>
+<ph outputclass="token keyword">var</ph>
+url
+<ph outputclass="token operator">=</ph>
+URL
+<ph outputclass="token punctuation">.</ph>
+createObjectURL
+<ph outputclass="token punctuation">(</ph>
+blob
+<ph outputclass="token punctuation">)</ph>
+<ph outputclass="token punctuation">;</ph>
+<ph outputclass="token comment">
+// url will be something like: blob:d3958f5c-0777-0845-9dcf-2cb28783acaf
+</ph>
+<ph outputclass="token comment">
+// now you can use the url in any context that regular URLs can be used in, for example img.src, etc.
+</ph>
+</codeph>
+</pre>
+</fig>
+<p>// Blob constructor example usage</p>
+<fig outputclass="example">
+<p>
+<ph outputclass="language">JavaScript</ph>
+</p>
+<pre outputclass=" language-javascript">
+<codeph outputclass=" language-javascript">
+<ph outputclass="token keyword">var</ph>
+aFileParts
+<ph outputclass="token operator">=</ph>
+<ph outputclass="token punctuation">[</ph>
+<ph outputclass="token string">'<xref format="html" id="a">hey!</xref>'</ph>
+<ph outputclass="token punctuation">]</ph>
+<ph outputclass="token punctuation">;</ph>
+<ph outputclass="token keyword">var</ph>
+oMyBlob
+<ph outputclass="token operator">=</ph>
+<ph outputclass="token keyword">new</ph>
+Blob
+<ph outputclass="token punctuation">(</ph>
+aFileParts
+<ph outputclass="token punctuation">,</ph>
+<ph outputclass="token punctuation">
+<!--shortcode/-->
+</ph>
+<ph outputclass="token string">"type"</ph>
+<ph outputclass="token punctuation">:</ph>
+<ph outputclass="token string">"text/xml"</ph>
+<ph outputclass="token punctuation"/>
+<ph outputclass="token punctuation">)</ph>
+<ph outputclass="token punctuation">;</ph>
+<ph outputclass="token comment">// the blob</ph>
+</codeph>
+</pre>
+</fig>
+</section>
+<section id="Related_specifications">
+<title>Related specifications</title>
+<table outputclass="wikitable relatedspecs">
+<tgroup cols="3">
+<thead>
+<row>
+<entry>Specification</entry>
+<entry>Status</entry>
+<entry>Related Changes</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>
+<xref format="html" href="http://www.w3.org/TR/FileAPI">W3C File API Specification</xref>
+</entry>
+<entry>W3C Working Draft</entry>
+<entry></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+<section id="See_also">
+<title>See also</title>
+<ul id="Other_articles">
+<li>Other articles:
+<p>
+<xref format="html" href="http://msdn.microsoft.com/en-us/library/ie/hh779016(v=vs.85).aspx">Saving files locally using Blob and msSaveBlob</xref>
+</p>
+</li>
+</ul>
+</section>
+<section id="Attribution">
+<title>Attribution</title>
+<p>
+<i>
+This article contains content originally from external sources.
+</i>
+</p>
+<p outputclass="attribution-block">
+Portions of this content come from the Mozilla Developer Network
+<xref format="html" href="http://creativecommons.org/licenses/by-sa/3.0/us/">
+<image href="https://static.webplatform.org/w/thumb/8/8c/cc-by-sa-small-wpd.svg/120px-cc-by-sa-small-wpd.svg.png"/>
+</xref>
+: [
+<xref format="html" href="https://developer.mozilla.org/en-US/docs/DOM/Blob">Blob</xref>
+Article]
+</p>
+<p outputclass="attribution-block">
+Portions of this content come from the Microsoft Developer Network: [
+<xref format="html" href="http://msdn.microsoft.com/en-us/library/ie/hh673542(v=vs.85).aspx#blobbuilder">blob constructor</xref>
+Article]
+</p>
+</section>
+</wpapibody>
+<related-links>
+<linkpool>
+<!--
+<div id="catlinks" outputclass="catlinks">
+<div id="mw-normal-catlinks" class="mw-normal-catlinks">
+<xref format="html" href="https://docs.webplatform.org/wiki/Special:Categories" outputclass="Special:Categories">Categories</xref>
+:
+<ul>
+<li>
+<xref format="html" href="https://docs.webplatform.org/wiki/Category:API_Objects" outputclass="Category:API Objects">API Objects</xref>
+</li>
+<li>
+<xref format="html" href="https://docs.webplatform.org/wiki/Category:API" outputclass="Category:API">API</xref>
+</li>
+<li>
+<xref format="html" href="https://docs.webplatform.org/wiki/Category:FileAPI" outputclass="Category:FileAPI">FileAPI</xref>
+</li>
+</ul>
+</div>
+</div>
+--></linkpool>
+</related-links>
+</wpapitopic>

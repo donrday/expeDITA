@@ -1,0 +1,43 @@
+
+<!-- ************************************************************************
+     WDDX DTD:
+-->
+
+
+<!ELEMENT wddxPacket (header, data)>
+<!ATTLIST wddxPacket
+          version CDATA #FIXED "0.9">
+
+<!ELEMENT header (comment?)>
+
+<!ELEMENT comment (#PCDATA)>
+
+<!ELEMENT data (boolean | number | dateTime | string | array | struct | recordset)*>
+
+<!ELEMENT boolean EMPTY>
+<!ATTLIST boolean 
+          value (true | false) #REQUIRED>
+
+<!ELEMENT string (#PCDATA)>
+
+<!ELEMENT number (#PCDATA)>
+
+<!ELEMENT dateTime (#PCDATA)>
+
+<!ELEMENT array (boolean | number | dateTime | string | array | struct | recordset)*>
+
+
+<!ELEMENT struct (var*)>
+
+<!ELEMENT var (boolean | number | dateTime | string | array | struct | recordset)>
+<!ATTLIST var
+          name CDATA #REQUIRED>
+
+<!ELEMENT recordset (field*)>       
+<!ATTLIST recordset 
+          rowCount CDATA #REQUIRED
+		  fieldNames CDATA #REQUIRED>
+
+<!ELEMENT field (boolean | number | dateTime | string)*>
+<!ATTLIST field
+          name CDATA #REQUIRED>

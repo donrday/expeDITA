@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tlotermtopic PUBLIC "-//LbyW//DTD DITA TLO Term Topic//EN" "../../../../../DITA-OT/dtd/plugins/tlotc/tlotermtopic_shell.dtd">
+<tlotermtopic id="termdef_term">
+  <tloterm>Structured Content</tloterm>
+	<prolog>
+		<author type="creator">Don Day</author>
+		<critdates>
+			<created date="2014-02-23"/>
+		</critdates>
+		<metadata>
+			<category>design</category>
+            <keywords>
+                <indexterm props="role(author)">Day, Don</indexterm>
+                <indexterm props="role(subject)">structured content<indexterm>defined</indexterm></indexterm>
+                <indexterm props="role(subject)">content<indexterm>structured</indexterm></indexterm>
+            </keywords>
+            <othermeta name="date_assigned" content="Jun 13, 2013"/>
+            <othermeta name="status" content="published"/>
+		</metadata>
+	</prolog>
+  <tlotermbody>
+	<tlowhat>
+            <p>Content, whether in a textual, visual, or playable format, that conforms to structural and semantic rules that allow machine processing to meet specific business requirements.</p>
+	</tlowhat>
+	<tlowhy>
+            <p>Humans are much better than computers when it comes to understanding the nuances of content. Structuring content with semantic metadata allows computers to understand the content’s relationship to business processes. This enables better discovery, marketing, and user engagement.</p>
+	</tlowhy>
+	<tloessay>
+            <p>Readers understand the visual grammar of style in what they read in a browser or in print, but computers do not. Even for scanned pages converted into word processor files, the computer can only determine that something in a block of text is possibly a paragraph, but it cannot necessarily discern a paragraph from a note or a quotation. By indicating the order and intent of the parts of a document, writers ensure that publishing tools well into the future can usefully render that content, even if reading technologies change.</p>
+            <p>Adding structure to content adds both present and future value, turning content from a single-use commodity into a long-term asset. Content can be structured in a number of ways, although most commonly it is done by applying descriptive, codified markup to it (Extensible Markup Language (XML) or other semantic markup) or by storing content in named fields in a database.</p>
+            <p>Structured content clearly indicates not only the parts of the discourse (the titles, sections, lists, tables, and phrases that represent organization) but also the semantic intent of those containers. For example, paragraphs identified more specifically as quotations can be not only rendered differently for readers, but also made more easily discovered in searches for quotations or citations.</p>
+	</tloessay>
+    <tlosummary>
+    	By structuring content appropriately, you can more easily turn information into knowledge, instructions into automation, concepts into lesson units, and more, thereby increasing its value to the business.
+    </tlosummary>
+  </tlotermbody>
+</tlotermtopic>

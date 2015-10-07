@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--
+ | LICENSE: This file is part of the expeDITA framework project hosted on
+ |          Github.io/donrday. See the accompanying license.txt file for
+ |          applicable licenses.
+ *-->
+<!--
+ | (C) Copyright Don R. Day 2015 All Rights Reserved.
+ *-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+  <public publicId="-//LbyW//DTD DITA WPAPI Topic//EN"
+          uri="plugins/tlotc/dtd/wpapitopic_shell.dtd"/>
+  <public publicId="-//LbyW//ELEMENTS DITA WPAPI Topic//EN"
+          uri="plugins/tlotc/dtd/wpapitopic.mod"/>
+
+</catalog>

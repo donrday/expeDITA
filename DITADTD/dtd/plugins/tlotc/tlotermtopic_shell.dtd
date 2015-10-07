@@ -1,0 +1,76 @@
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA Message Specialization DTD                                    -->
+<!--  VERSION:   1.O                                               -->
+<!--  DATE:      February 2006                                      -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identfier or an 
+      appropriate system identifier 
+PUBLIC "-//LbyW//DTD DITA TLO Term Topic//EN"
+      Delivered as file "tlotermtopic_shell.dtd"                            -->
+
+<!-- doctype:
+<!DOCTYPE tlotermtopic PUBLIC "-//LbyW//DTD DITA TLO Term Topic//EN" "tlotermtopic_shell.dtd">
+-->
+<!-- catalog:
+<!ENTITY % tloterm-dtd 		PUBLIC "-//LbyW//DTD 		DITA TLO Term Topic//EN" "tlotermtopic_shell.dtd">
+<!ENTITY % tloterm-typemod 	PUBLIC "-//LbyW//ELEMENTS 	DITA TLO Term Topic//EN" "tlotermtopic.mod">
+-->
+
+<!-- ============================================================= -->
+<!-- SYSTEM:     Darwin Information Typing Architecture (DITA)     -->
+<!--                                                               -->
+<!-- PURPOSE:    DTD to describe term topics for  TLOTC series     -->
+<!--                                                               -->
+<!-- ORIGINAL CREATION DATE:                                       -->
+<!--             July 2015                                         -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-dec     PUBLIC
+"-//OASIS//ENTITIES DITA Highlight Domain//EN"
+"../../dtd/highlightDomain.ent"                                                >
+%hi-d-dec;
+
+<!--vocabulary substitution -->
+<!ENTITY % ph      "ph      | %hi-d-ph;">
+
+<!--vocabulary declarations-->
+<!ENTITY hi-d-att "(topic hi-d)">
+<!ENTITY ut-d-att "(topic ut-d)">
+<!ENTITY xpd-d-att "(topic xpd-d)"><!-- unique for expeDITA processing -->
+
+<!--Specify the topics that can be included within a tloterm topic-->
+<!ENTITY % tloterm-info-types "tlotermtopic">
+
+<!--     DOMAIN ATTRIBUTE DECLARATIONS       -->
+<!ENTITY xpd-props-d-att "a(props  formtype)">
+<!--     DOMAIN EXTENSIONS       -->
+<!--     DOMAIN ATTRIBUTE EXTENSIONS     -->
+<!--     TOPIC NESTING OVERRIDE      -->
+<!--     DOMAINS ATTRIBUTE OVERRIDE      -->
+
+<!--Specify the domain-specific vocabulary modules (limited for forms)-->
+<!ENTITY included-domains "&hi-d-att; &ut-d-att; &xpd-d-att;">
+
+<!--Embed the base topic module to define the base elements-->
+<!ENTITY % topic-type PUBLIC "-//OASIS//ELEMENTS DITA Topic//EN" "../../dtd/topic.mod">
+  %topic-type;
+
+<!--Embed the tloterm module to get the tloterm elements-->
+<!ENTITY % tloterm-typemod PUBLIC "-//LbyW//ELEMENTS DITA tloterm//EN" "tlotermtopic.mod">
+  %tloterm-typemod;
+
+<!ENTITY % hi-d-def PUBLIC "-//OASIS//ELEMENTS DITA Highlight Domain//EN" "../../dtd/highlightDomain.mod">
+  %hi-d-def;

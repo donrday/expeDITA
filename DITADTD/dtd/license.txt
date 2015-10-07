@@ -1,0 +1,1 @@
+Files in this DTD directory are OASIS materials; see NOTICE for the formal OASIS license and disclaimer.

@@ -1,0 +1,23 @@
+
+<event id="adsf">
+	<eventname>Event Name</eventname>
+	<eventbody>
+		<ul outputclass="eventtype">
+		<section outputclass="eventdescription">
+		<title>Description</title>
+		</section>
+		<section outputclass="eventlocation">
+		<title>Location</title>
+		</section>
+		<section outputclass="eventfrom">
+		<title>Date From</title>
+		</section>
+		<section outputclass="eventtimezone">
+		<title>Time Zone</title>
+		</section>
+		<section outputclass="eventorganizer">
+		<title>Organizer</title>
+		</section>
+	</eventbody>
+</event>
+Add Event

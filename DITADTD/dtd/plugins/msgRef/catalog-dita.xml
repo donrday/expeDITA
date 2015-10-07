@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--
+ | LICENSE: This file is part of the DITA Open Toolkit project hosted on
+ |          Sourceforge.net. See the accompanying license.txt file for
+ |          applicable licenses.
+ *-->
+<!--
+ | (C) Copyright IBM Corporation 2006. All Rights Reserved.
+ *-->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+  <public publicId="-//IBM//DTD DITA Message Reference//EN"
+          uri="plugins/msgRef/dtd/msgRef.dtd"/>
+  <public publicId="-//IBM//ELEMENTS DITA Message Reference//EN"
+          uri="plugins/msgRef/dtd/msgRef.mod"/>
+
+</catalog>
